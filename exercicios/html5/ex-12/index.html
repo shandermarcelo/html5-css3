@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>HTML5 Exercício 12</title>
+</head>
+<body>
+    <h1>Vídeos</h1>
+    <p>&nbsp;Mais uma das Mídias que a <abbr title="Hypertext Markup Language">HTML</abbr> possui suporte, e assim como Imagens e Áudios, Vídeos também devem ser desenvolvidos com os mesmos objetivos. <strong>Arquivos compactos para melhor velocidade de navegação; Dizem que de 1080 pixels em diante é recomendado que vídeos sejam armazenados em um servidor apropriado, ou seja que não seja o servidor local mas isso é papo pra outra ocasião (tudo por causa de custos de plano de hospedagem)</strong></p>
+    <p>&nbsp;É possivel tornar vídeos dinamicos, há diferentes formatos de extenções para vídeos como <strong>mp4/m4v <em>saiba que estes são a mesma coisa e são os mais usados</em></strong> também tem a extensão .webm que possui arquivos pequenos e de baixa qualidade e a extensão .ogg/ogv que também são a mesma coisa sendo esta não muito utilizada. <mark><strong><em>NESSE EXERCÍCIO EU VOU UTILIZAR OS FORMATOS .mp4 e .webm</em></strong></mark></p>
+    <h2>Exercício de vídeos</h2>
+    <video controls width="750" poster="img/rabbit-poster.jpeg" controlsList="nodownload">
+        <source src="midia/Free Use-License-Video.mp4" type="video/mp4">
+        <source src="midia/Free Use-License-Video.webm" type="video/webm">
+        <p>Seu navegador não consegue reproduzir vídeo</p>
+    </video>
+    <p>&nbsp;Acima você pode ver um exemplo de como vídeos são desenvolvidos. <strong>A estrutura é identica a de uma imagem adaptavel ou a de um áudio</strong> porem aqui nos temos os parametros de <em>wdith=""</em> que é onde você declara como valor a quantidade de pixels que o display do video tera <em>poster=""</em> é um parametro que você usa para endereçar a URL DA THUMBNAIL do vídeo e os outros parametros seguem a mesma lógica das mídias anteriores porem adaptada para video. <mark>sabia que cada parametro source desenvolvido garanti maior compatibilidade porem isso também gera maior custo com hospedagem local por causa do gasto de banda que página com muito acesso possuem</mark></p>
+    <h1>Incorporanto videos e Hospedagem externa</h1>
+    <p>&nbsp;Como você viu acima a Hospedagem Local pode ser muito cara e para sanar esse problema a <strong>incorporação de vídeos é utilizada</strong> mas o que é isso? basicamente nós utilizamos um video que esta hospedado em um servidor externo (plataforma de video) e através da incorporação nós adicionamos o video ao nosso projeto veja um exemplo abaixo</p>
+    <h2>Video incoporado do Youtube</h2>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0kU2tNCYTsg?si=H0WcIypcmDspGu9h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p>&nbsp;Acima você tem um exemplo de video incorporado do <a href="https://www.youtube.com/" hreflang="pt-br" rel="external" target="_blank">Youtube</a>, esta é uma Plataforma onde você pode hospedar video <strong><em>mas outras pessoas poderam ter acesso a ele, o que não pode ser de desejo do cliente</em></strong> e também possui o problema de exibição de outros videos; Enfim não use o Youtube para fazer Hospedagem de vídeos</p>
+   <h3>Conclusão</h3>
+   <p>&nbsp;Eu procurei algum site que faça a hospedagem de video para fazer mais exemplços porem <strong>NENHUMA DAS OPÇÕES ME AGRADOU, OU O SITE TE COBRA SEUS PULMÕES PELO SERVIÇO DE HOSPEDAGEM COM MAIS FUNCIONALIDADES COMO PRIVACIDADE/EXCLUSIVIDADE OU ELE É GRATUITO MAS NÃO TE OFEREÇE NEM METADE DESSAS FUNÇÕES PORTANTO <mark>PROCURE POR UMA BOA OPÇÃO DE FAÇA O QUE ESTA AQUI. PEGUE O VIDEO QUE DESEJA INCORPORAR. COPIE SEU CÓDIGO PRONTO(FAÇA AJSTES SE ACHAR NECESSÁRIO) E LIVRE O CLIENTE DE CUSTOS EXORBITANTES COM HOSPEDAGEM LOCAL (CASO ELE QUEIRA TUDO LOCALMENTE AI TANTO FAZ O QUE IMPORTA É QUE ESSE JEITO DE UTILIZAR VÍDEOS É O MAIS PRATICO, MESMO SENDO TRABALHOSO)</mark></strong></p>
+   <a href="../../../navegador/index.html" hreflang="pt-br" rel="prev" target="_self">Navegador</a>
+</body>
+</html>

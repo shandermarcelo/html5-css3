@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Pseudo Elementos e Links</title>
+    <style>
+        @charset "UTF-8";
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        p {
+            text-indent: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: green;
+        }
+
+        a:hover {
+            text-decoration: solid;
+            color: rgb(185, 185, 0);
+            font-weight: bold;
+        }
+
+        a:visited { /* pseudo classe visited manipula o que aconteçe com o elemento quando ele já tiver sido visitado */
+            text-decoration: none;
+            color: red;
+            font-weight: bolder;
+        }
+
+        .test::before {
+            content: 'Conteudo de peseudo elemento ::after';
+            background-color: rgb(56, 56, 0); 
+            color: rgb(252, 252, 165);
+            text-decoration: dotted;
+            font-weight: bolder;
+        }
+
+        .test::after {
+            content: 'Conteudo de pseudo elemento ::after';
+            background-color: rgb(24, 24, 0);
+            color: rgb(255, 255, 95);
+            text-decoration: double;
+            font-weight: lighter;
+
+        }
+
+        /*todos esses estilos só seram visiveis apos o content e é através do content que esses estilos seram visualizados */
+        
+        a:active { /* pseudo classe manipula o que aconteçe com o elemento quando ele for precionado/activado */
+            background-color: black;
+            color: white;
+            text-decoration: dashed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://www.youtube.com/@Shannder" hreflang="pt-br" rel="external" target="_blank">Youtube</a></li>
+        <li><a href="https://www.duolingo.com/learn" hreflang="pt-br" rel="external" target="_blank" class="test">Duolingo</a></li>
+        <li><a href="https://soundcloud.com/memphis-culture/3-9mm-memphis-cult-groove?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" hreflang="en" rel="external" target="_blank">WADADADANG</a></li>
+    </ul>
+    <h1>Pesudo Elementos</h1>
+    <p>Pseudo Elementos são "meio elementos" que tem a função de colocar conteudo antes ou depois de um elemento, no caso dos estilos estes pseudo elementos vão permitir que se desenvolva estilos antes ou depois de um conteudo, este pode ser um conteudo <abbr title="Hypertext Markup Language">HTML</abbr> puro ou algo que possua estilos. Por ser algo que ou fica entre um conteudo ou apos este <strong>o uso dos pseudo elementos se limitam apenas a elementos que possuam componentes de abertura e fechamento, as famosas <></> </strong></p>
+    <p>Os valores que se pode declarar para pseudo elementos são</p>
+    <ul>
+        <li>::  é o simbolo que representa os pseudo elementos, todos devem ser declarados apos este simbolo</li>
+        <li>::before  para desenvolver estilos antes do inicio do elemento</li>
+        <li>::after  para desenvolver estilos depois do termino do elemento</li>
+        <li>::firstline  para desenvolver estilos na primeira linha de um paragrafo</li>
+        <li>content  é o que precede todo os estilos que se poça fazer em um pseudo elemento, geralmente seus valores são declarados entre ''</li>
+    </ul>
+    <a href="/html5-css3/exercicios/css3/ex-22/links.html" hreflang="pt-br" rel="prev" target="_self">NAVEGADOR</a>
+</body>
+</html>

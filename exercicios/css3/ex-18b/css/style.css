@@ -1,0 +1,15 @@
+body {
+    font-size: 2em;
+}
+
+strong {
+    color: rgb(255, 136, 0);
+}
+
+em {
+    color: green;
+}
+
+mark {
+    background-color: red;
+}

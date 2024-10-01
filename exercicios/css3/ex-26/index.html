@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Grouping Tags</title>
+    <style>
+        @charset 'UTF-8';
+
+        p {
+            text-indent: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Grouping Tags?</h1>
+        <article>
+            <p>Grouping Tags, ou Elementos de agrupamento eram elementos que tinham a função de "juntar" o conteudo que eles afiliavam, <code>&lt;div&gt;</code> é um destes elementos, possui seu display como <em>block-level</em> e <code>&lt;span&gt;</code> é outro elemento que possui seu display como <em>inline-level</em> assim, ambos cumpriam a mesma função e eram utilizados para literalmente juntar todo o conteudo de um projeto formando blocos de conteudo agrupado, para diferenciar uma <code>&lt;div&gt;</code> de outra estes elementos possuiam o parametro <em><code>&lt;id&gt;</code></em> que como você sabe, tem a função de dar um ideitificador único para o elemento que o possuir e é desse jeito que os elementos de agrupamento funcionam. na <abbr title="Hypertext Markup Language 4">HTML 4</abbr> pelo menos.</p>
+            <p>Já na <abbr title="Hypertext Markup Language 5">HTML 5</abbr> o significado foi introduzido a essencia da linguagem, agora todo conteudo deveria ser desenvolvido visando o significado do mesmo e não mais a forma, e com isso esses elementos de agrupamento "começaram a ficar em desuso" <small>MESMO QUE MUITOS OS USEM ATÉ HOJE</small> Atualmente é recomendado o uso de <strong>Elementos Semânticos</strong> para fazer o agrupamento de conteudo. se com elementos não semânticos nós tinhamos que desenvolver id para distinguilos uns dos outros agora nós possuimos elementos que possuem seu significado e propósito intrincico a eles, o que facilita na ideitificaçam do conteudo que eles "agrupam" <mark>MAS NÃO SE ENGANE AINDA EXISTEM ELEMENTOS QUE DEVEMOS USAR PARAMETROS OU ELEMENTOS ADICIONAIS PARA DISTINGUIR</mark> Agora veja um pouco mais sobre estes elementos.</p>
+
+            <section>
+                <h2>Semântica e Agrupamento</h2>
+                <p>Elementos Semânticos que fazem agrupamento basicamente, são como um elemento <code>&lt;div&gt;</code>, só que semânticos, o que quer dizer que estes elementos possuem em sua essencia um significado que esta relacionado a função que eles cumprem, por exemplo <code>&lt;header&gt;</code> possui o significado de "ser o cabeçalio" e qual é a função desse elemento? <strong>SER O  DO CONTEUDO QUE ELE AGRUPA!</strong> e qual seria esse conteudo agrupado? seria toda parte de um conteudo que estaria afiliada/aninhada a uma <code>&lt;div&gt;</code> que teria seu parâmetro id como "cabeçalio". Essa é a ideia por tras dos elementos semânticos que fazem grouping tags, são elementos que demarcam partes de conteudo sendo que agora, os próprios elementos possuem um significado para si mesmos, um sentido de estarem ali. Agora veja uma lista com alguns elementos semâneticos que são usados para fazer agrupamento</p>
+            </section>
+
+            <section>
+                <h2>A lista</h2>
+                <dl>
+                    <dt><code>&lt;header&gt;</code></dt>
+                    <dd>Tem a função de ser a <code>&lt;div&gt;</code> do cabeçalio de um conteudo</dd>
+                    <dt><code>&lt;nav&gt;</code></dt>
+                    <dd>Tem a função de ser um "cardápio" ou menu de navegação. agrupa links</dd>
+                    <dt><code>&lt;main&gt;</code></dt>
+                    <dd>Tem a função de ser "a área principal" de um conteudo. podendo existir apenas 1 elemento destes por página</dd>
+                    <dt><code>&lt;article&gt;</code></dt>
+                    <dd>Tem a função de ser "um conteudo independente dos outros" Teriasse um article para cada topico abordado</dd>
+                    <dt><code>&lt;aside&gt;</code></dt>
+                    <dd>Tem a função de ser conteudo periferico de um <code>&lt;article&gt;</code> como conteudo extra</dd>
+                    <dt><code>&lt;section&gt;</code></dt>
+                    <dd>Tem a função de ser "parte de um conteudo" Cada sub topico seria uma section, demarcando seu conteudo como um pedaço e dividindo ainda mais o conteudo em áreas separadas</dd>
+                    <dt><code>&lt;footer&gt;</code></dt>
+                    <dd>Tem a função de ser o rodapé de um conteudo</dd>
+                    </dl>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <a href="/html5-css3/navegador/index.html" hreflang="pt-br" rel="prev" target="_self">Navegador</a>
+    </footer>
+</body>
+</html>

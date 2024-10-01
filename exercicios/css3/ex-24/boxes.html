@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Exercício 24 Caixas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            text-indent: 10px;
+        }
+
+        strong {
+            font-weight: bolder;
+            color: red;
+        }
+
+        strong:hover {
+            font-weight: bolder;
+            font-size: larger;
+            color: brown;
+        }
+
+        em {
+            font-size: large;
+            color: darkgoldenrod;
+        }
+
+        abbr {
+            text-decoration: none;
+        }
+
+        abbr:hover {
+            font-size: large;
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Caixas Box level e Inline level</h1>
+    <p>O conteudo dessa explicação se refere a ideia de como é a estrutura de um conteudo quando ele é exibido em tela e o nome caixa se refere justamente a isso, como se todo conteudo desenvolvido estivesse contido dentro de uma "caixa virutal" esta caixa, você pode chamar de <strong>elemento</strong> e como você sabe <em>Aninhamento</em> é o nome dado ao efeito de um elemento conter ou estar contido dentro de outro, e como nossa ideia é de que os conteudos são desenvolvidos em caixas isso tudo nos leva e entender que a estrutura <abbr title="Hypertext Markup Language">HTML</abbr> é composta por "caixas dentro de outras caixas" Mas antes de entendermos como é que essas caixas são compostas vamos aos "Tipos de exibição que tais caixas podem ter"</p>
+    <h2>Aninhamento e Box Level</h2>
+    <p>Caixas que são desenvolvidas nesse "Box Level" geralmente não possuem manipulações especiais, isso porque <em>Box Level é o valor padrão para a exibição da maioria dos elementos</em> um bom exemplo de box level é a propria estrutura dessa explicação, os conteudos textuais que você vê ocupam toda a largura da tua resolução de tela, e note que quando quando o conteudo de um elemento <code>&lt;p&gt;</code> termina, o elemento <code>&lt;p&gt;</code> seguinte é exbido abaixo, mesmo sem ter tido manipulação para isso anteriormente, <em>este é o display box level, exibição box level</em>. Os conteudos de titulo também seguem esse padrão e isso se propaga para a maioria dos elementos <abbr title="Hypertext Markup Language">HTML</abbr> Esse efeito é como se estivesse empilhando caixas sem considerar espaços gerados entre o fim do conteudo de uma e outra</p>
+    <h2>Inline Level</h2>
+    <p>Aqui as coisas mudam, diferente do display box level, o display Inline Level "junta" os conteudos, os exibindo um ao lado do outro, aqui o espaço que seria deixado em branco por um display box level é usado para desenvolver o proximo conteudo <strong>exemplos disso voçê vê agora, o elemento <code>&lt;strong&gt;</code> possui o display inline level ou seja, ele assim como outros elementos que possuem o display desse tipo, ocupam espaço que seria deixado em branco para que "outra caixa fosse empilhada"</strong> entenda o display inline como "exibição conjunta" e box level como "exibição separada"</p>
+    <h1>Estrutura de uma "Caixa"</h1>
+    <p>Agora falando sobre essa tal caixa eu vou usar uma imagem para que ela deixe a explicação melhor</p>
+    <img src="img/boxex.png" alt="Exemplo Ilustrativo de como é uma Box-Model" width="1058" height="818" loading="eager">
+    <p>Vamos começar de dentro apra fora. Primeiramente nós temos o local onde o conteudo se encontra (O blabalba) todo conteudo ficará no centro da caixa, possuindo como area as medidas de <strong>Height, que é a altura. e de Width, que é a largura</strong> essas duas medidas vão definir qual sera o local de ocupação de um conteudo</p>
+    <p><em>Padding é o nome dado a uma configuração que damos a Box Model quando queremos que haja um preenchimento interno, que vai empurrar o conteudo para longe da Border</em> e falando em Border, este é o nome dado as bordas da Box model, todo conteudo esta contido entre suas bordas (não esqueça que padding não é configurado por padrão). toda borda possui uma espeçura, uma forma e uma tonalindade. <mark>lembresse que esse parametro pode considerar margin de outros elementos caso você queira uma estilização especifica como padding de 1 pixel para um conteudo de footer</mark></p>
+    <p>Outline é outra configuração que assim como padding não é ativa por padrão e a função do outline é de ser um traçado para fora da borda, e o calculo da sua espessura faz parte da Margin estabelecida.</p>
+    <p>Margin é a parte final da nossa Box Model, Margin é uma configuração que usamos para gerar espaço entre um elemento e outro. enquanto padding faz um preenchimento interno, Margin faz um preenchimento externo, afastando outros conteudos da Box Model</p>
+    <h3>Resumão da Box Model</h3>
+    <p>1° Conteudo fica em uma área demarcada pela height, que é altura e pode ser calculada em pixels ou portentagem e pela width, que é a latura e pode ser calculada em pixels ou porcentagem</p>
+    <p>2° Padding é um configuração que podemos fazer em pixels ou porcentagem, pode ter direcionamento (para cima, para baixo, para a esquerda ou para a direita. ou para todos os lados) e vai gerar o preenchimento interno, que empurra o conteudo para o centro da box model e o afasta de suas borders</p>
+    <p>3° Border é uma configuração que gera as bordas do conteudo da Box Model, tendo sua espessura calculada em pixels ou porcentagem, sua forma definina (solid, dashed, double line) e sua tonalidade(cor) declarada</p>
+    <p>4° Outline é uma configuração inativa que gera um traço visual para fora da border, sua espessura faz parte da Margin</p>
+    <p>5° Margin é uma configuração que pode ser calculada em pixels ou porcentagem, tem como função separar outros elementos da Box Model, assim como padding a margin pode ser direcionada</p>
+    <a href="/html5-css3/navegador/index.html" hreflang="pt-br" rel="prev" target="_self">NAVEGADOR</a>
+</body>
+</html>

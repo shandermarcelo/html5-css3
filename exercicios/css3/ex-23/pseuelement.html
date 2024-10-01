@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Pseudo Elementos</title>
+    <style>
+        @charset 'UTF-8';
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        p {
+            text-indent: 10px;
+        }
+
+        a {
+            color: darkgreen;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(97, 97, 0);
+            text-decoration: none;
+        }
+
+        a:active {
+            color: red;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: blue;
+        }
+
+        a::before {
+            content: '[Link] ';
+
+        }
+        a::after {
+            content: ' [Link]';
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo Elementos</h1>
+    <ul>
+        <li><a href="https://www.youtube.com/channel/UCyUlRd7Oi1LGZ_JaZH1f9_w" hreflang="pt-br" rel="external" target="_blank">Meu Youtube</a></li>
+        <li><a href="https://www.duolingo.com/profile/ShanMarcelorf" hreflang="pt-br" rel="external" target="_blank">Meu Duolingo</a></li>
+        <li><a href="https://br.pinterest.com/shandermarcelorf/" hreflang="pt-br" rel="external" target="_blank">Meu Pinterest</a></li>
+    </ul>
+    <p>O exemplo acima demonstra como Pseudo Elementos podem ser desenvolvidos. basicamente a função de um pseudo elemento é de permitir que se desenvolva conteudos nas periferias de um elemento. (entenda isso como as laterais como afrente do elemento e atras do elemento) <strong>pseudo elementos são representados pelos dois pares de dois pontos ::</strong> e algumas das possiveis declarações são as seguintes</p>
+    <ul>
+        <li>::before Desenvolve conteudo antes ou afrente do elemento</li>
+        <li>::after Desenvolve conteudo depois ou atras do elemento</li>
+        <li>::first-letter Desenvolve conteudo referente a primeira letra de um conteudo textual</li>
+        <li>::first-line Dsenvolve conteudo referente a primeira linha de um conteudo textual</li>
+    </ul>
+    <p>Agora veja como é feita uma declaração de pseudo elementos</p>
+    <pre>
+        <code>
+            a::before {
+                content: '[Link] ';
+    
+            }
+            a::after {
+                content: ' [Link]';
+            }
+        </code>
+    </pre>
+    <p>O código acima demonstra como é a estrutura de uma declaração de pseudo elementos. primeiro se vincula o pseudo elemento ao seletor que recebera os estilos e depois se desenvolve usando content, colocando o valor que sera o conteudo do pseudo elemento entre aspas</p>
+    <a href="/html5-css3/navegador/index.html" hreflang="pt-br" rel="prev" target="_self">NAVEGADOR</a>
+</body>
+</html>

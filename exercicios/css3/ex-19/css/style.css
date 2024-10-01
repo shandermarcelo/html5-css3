@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Flixgirl';
+    src: url('../fonts/Filxgirl.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font:normal 3em 'Flixgirl';
+}
+
+h2 {
+    font: normal 3em 'Flixgirl';
+}

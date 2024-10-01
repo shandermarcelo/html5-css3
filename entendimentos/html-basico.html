@@ -1,0 +1,20 @@
+<!DOCTYPE html><!--Declaração de tipo de documento isso é diz ao navegador que o documento que ele vai formatar é do tipo html-->
+<html lang="pt-br"><!--elemento html é o sustentador de toda a estrutura de um documento HTML, note que todos os outros elementos estão para dentro das tags do html, isso se chama aninhamento, diz que um elemento esta dentro do outro. lang é um parametro, que é uma função adicional que os elementos html possuem, este define que o documento html possui como idioma nativo o Portugues Brasileiro-->
+    <head><!--o elemento head é reponsavel por representar a area que contem todos os elementos de configuração de um documento html, a vasta maioria destes elementos não é de visualização do cliente(usuario) e os poucos que são visiveis são de forma sutil-->
+        <meta charset="UTF-8"><!--elemento meta representa um dado de configuração, este declara que o documento html é compativel com caracterés da UTF-8, isso é util para idiomas que possuem palavras com acentuação e letras desse tipo-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--essa metatag diz que a resolução de tela do documento html vai ocupar a tela inteira e ao ser renderização ela ira abrir em uma escala de 100%, 1.0 quer dizer 100%-->
+        <title>Entendimentos HTML e CSS Básico</title><!--elemento <title> tem a função de representar o titulo da página html-->
+        <link rel="stylesheet" href="url do arquivo .css"><!--CSS Externo representado pelo elemento <link> que faz o vinculo entre um arquivo .html e um arquivo .css, essa vinculação é chamada de "recurso externo" que é quando se estabelece uma relação entre um documento .html a algo externo a ele, no caso um arquivo .css-->
+        <style>
+            h1{
+                font-size: 20pt;
+                color: #fff;
+                background-color: #aaa;
+            }
+        </style><!--CSS Interno com o elemento <style> aninhando toda a estilização com h1 sendo o seletor {} sendo os componentes de abertura e fechamento das estilizações e aninhado entre os colchetes nós temos as declarações, que são compostas por propriedades, que é o nome do estilizador que se deseja usar, seguidos de :; que são os componentes de abertura e fechamento do valor, que é a estilização em si-->
+    </head>
+    <body><!--o elemento <body> é responsavel por possuir entre suas tags todo elemento que representa a página visual do documento html, digo página visual porque como o head possui elementos de configuração o body possuira os elementos que seram visiveis pelo cliente(usuario)-->
+        <h1>Olá, Mundo!</h1>
+        <p style="color: #333;font-size: 10px;">Não me Amaldiçoe!</p><!--CSS Inline direto no elemento com o parametro style-->
+    </body>
+</html>

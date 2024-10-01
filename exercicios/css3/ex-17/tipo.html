@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Exercício 17 - Tipografia</title>
+    <style>
+        strong {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: rgb(196, 15, 15);
+        }
+
+        mark {
+            text-decoration: none;
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+        }
+
+        em {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: rgb(25, 25, 255);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>A Tipografia</h1>
+    </header>
+    <main>
+        <p>&nbsp;A <strong>Tipografia</strong>, resumidamente <mark>são as letras que foram e são desenvolvidas com o objetivo de serem comodas ao olhar e mais fáceis de se ler, mais legíveis</mark> e dizem por ai que a forma de ler algo traz emoções <small>eu não tenho habido de ler então não sei mas o conhecimento está ai</small> <em>O que você deve levar disso é que assim como certas cores combinam melhor com certas situações, certas letras (fontes) também combinam melhor com certas situações</em></p>
+        <h2>Anatomia de um Tipo</h2>
+        <p>&nbsp;Toda fonte quando é desenvolvida o Tamanho de suas letras é sempre considerado, quem desenvolve a Fonte deve fazer tais medidas e quem for utilizar tal fonte deve saber se as medidas dela encaixam simetricamente com os conteudos do seu projeto mas como essas medidas são tiradas? A letra x minuscula é a letra usada como ponto de partida para o desenvolvimento de fontes, isso aconteçe por causa da "altura x" que basicamente sera o tamanho padrão de todas as letras minusculas que a fonte vai ter(sem seus ascendentes, que é o nome dado aos espaços de vazão de letras para cima e descendentes, que é o nome dado aos espaços de vazão das letras para baixo), e enquanto as letras maiusculas, estas tem sua propria metrica de altura, no caso a altura das maiusculas e o total de todas estas medidas se chama corpo, e sera a altura do corpo que sera configurada na CSS</p>
+        <h3>Serifas</h3>
+        <p>&nbsp;Algumas fontes podem possuir em suas letras "pequenas protuberancias" sabe como extenções, "pernas" e estas coisas são chamadas de <strong>Serfia(s)</strong><mark>e disem que essas serifas facilitam a leitura porque o nosso cerebro cria uma linha imaginaria usando essas serifas (que em um texto estariam presentes e varias letras tanto na parte de cima quanto embaixo) enfim é o que disem por ai <small>serifas ajudam mais em conteudo impresso em papel</small></mark></p>
+        <h1>Geometria do Tipo</h1>
+        <img src="img/tipo-anatomy_geom.jpg" alt="Ilustração das formas geométricas dos tipos" width="772" height="214" loading="eager">
+        <p>&nbsp;Acima nós temos uma ilustração das Formas Geométricas que um Tipo(s) pode ter vamos descrevelas da esquerda para a direita</p>
+        <ol>
+            <li><p>vértice = Forma que pareçe um "chapeu"</p></li>
+            <li><p>haste = Forma que é reta independente do grau</p></li>
+            <li><p>filete = Forma que é uma haste deitada e une duas hastes ou uma ou mais hastes e arcos</p></li>
+            <li><p>arco = Forma que pareçe um arco ou uma barriga pra cima</p></li>
+            <li><p>esporão = Forma que pareçe um salto, sustena o tipo (algumas fontes não possuem)</p></li>
+            <li><p>terminal = Forma que não esta conectada a outra Forma</p></li>
+        </ol>
+        <img src="img/tipo-anatomy_corpo.jpg" alt="Ilustração das formas de corpo dos tipos" width="791" height="229" loading="eager">
+        <p>&nbsp;Agora com essa imagem das Formas de Corpo, vamos descrevelas da direita para esquerda</p>
+        <ol>
+            <li><p>olho = Forma caracterizada por ser um vazio completamente cercado</p></li>
+            <li><p>cauda = Forma caracterizada por ser uma apêndice do corpo de algumas letras, que fica abaido da altura-x</p></li>
+            <li><p>espinha = Forma caracterizada por ser uma curza que é de um lado e do outro, forma estruturante da letra S</p></li>
+            <li><p>pé = Forma caracterizada por ser a base que sustenta um tipo (algumas letras podem possuir serifas no pé outras não)</p></li>
+            <li><p>perna = Forma caracterizada por ser um elemento que sai de uma haste ou braço vai para baixo</p></li>
+            <li><p>braço = Forma caracterizada por ser um elemento que sai de uma haste e vai para cima</p></li>
+            <li><p>orelha = Forma caracterizada por ser uma apêndice, presente na letra g e pode ter a forma de gota, botão, bandeira ou gancho </p></li>
+            <li><p>barriga = Forma caracterizada por ser uma união entre dois arcos</p></li>
+            <li><p>BONUS enlace = Forma caracterizada por ser como uma haste, linha ou filete que se liga a um arremate, uma serifa ou um terminal, podendo ser angular ou curvilíneo</p></li>
+        </ol>
+            <h3>Resumo</h3>
+            <p>&nbsp;Letras, sejam elas maiúsculas ou minúsculas são <mark>Glifos (Cracteres)</mark> o conjunto de todos esses glifos é uma <em>Fonte</em>; <strong>Familias tipograficas (Variações)</strong> é quando uma Fonte possui seus Glifos em diferentes formatos como "A light A normal A Seminegrito A negrito A extranegrito" e esse conjunto de caracteres, existem para ser utilizados em diferentes situações</p>
+            <h3>Categoria de Fontes</h3>
+            <p>&nbsp;Você deve ter imaginado que se existem fontes que podem ter caracteres para diferentes usos também se tem as categorias das fontes, essas categorias servem para ideitificar qual é o tipo de fonte e pra que ela serve or não veja abaixo</p>
+            <img src="img/categfonts.jpg" alt="Ilustração das Categorias da Fontes" width="616" height="391" loading="eager">
+            <ul>
+                <li><p><em>Fonte serifada</em> Aqui se ideitifica toda fonte que faz o uso das serifas</p></li>
+                <li><p><em>Fonte sem serifa</em> Aqui se ideitifica toda fonte que não faz uso da serifa</p></li>
+                <li><p><em>Fonte monoespaçada</em> Aqui se ideitifica toda fonte onde seus glifos possuam as mesmas proporções de largura. esse tipo de fonte pode ou não fazer uso de serifas</p></li>
+                <li><p><em>Fonte de scriptada</em> Aqui se ideitifica toda fonte que possui glifos que simulam a caligrafia humana (escrita a mão)</p></li>
+                <li><p><em>Fonte Display(Comemorativa)</em> Aqui se ideitifica fontes que não possuem nenhuma caracteristica de outras fontes, são as fontes nada a ver</p></li>
+            </ul>
+            <h2>Conclusão</h2>
+            <p>&nbsp;O que você deve ter em mente sobre as fontes é que <mark>CADA FONTE POSSUI UM PROPÓSITO, CADA UMA VAI SER ÚTIL PARA ALGUMA COISA E NO NOSSO CASO NÓS ESCOLHEMOS UMA FONTE PARA UM PROJETO COM O OBJETIVO DE COMBINALA SIMETRICAMENTE COM A IDEITIDADE DO PROJETO, BUSCAMOS A COMODIDADE DE LEITURA</mark><strong>Textos longos sempre teram as cores branca de fundo e preta (essas cores são contrastantes sempre usaremos o maior contraste possivel para textos) na fonte porque é assim que as coisas são</strong><mark>também se recomenda para textos longos impressos em tela(textos digitais) fontes não serifadas que possuam um espaçamento adequado(nada de espaçamento curto)</mark></p>
+    </main>
+    <a href="/html5-css3/navegador/index.html">Navegador</a>
+</body>
+</html>

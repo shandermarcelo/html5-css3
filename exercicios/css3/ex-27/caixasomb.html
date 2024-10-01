@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Exercício 27</title>
+    <style>
+        @charset 'UTF-8';
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav {
+            background-color: rgb(155, 155, 155);
+            padding: 3px;
+            box-shadow: 5px 3px 1px 1px black; /*primeiro valor referesse ao deslocamento horizontal da sombra  segundo valor se refere ao deslocamento vertical da sombra  terceiro valor referese ao espalhamento da sombra  ultimo valor referese a cor da sombra*/
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        article {
+            background-color: lightgray;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 15px;
+        }
+
+        article > aside {
+            background-color: rgb(185, 185, 185);
+        }
+        footer > p {
+            margin: 0px;
+        }
+
+        footer {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin: 0px;
+        }
+
+        div#commonrad {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 20px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 19px;
+            border-bottom-left-radius: 15px;
+        }
+
+        div#shortrad {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+            border-radius: 15px 15px 19px 15px;
+        }
+
+        div#matchrad {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(61, 61, 61);
+            margin: 20px;
+            border-radius: 60px 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sombras de Caixas</h1>
+        <nav>
+            <a href="/html5-css3/navegador/index.html" hreflang="pt-br" rel="prev" target="_self">NAVEGADOR</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="boxshadow">
+            <p>Box Shadows Outset e Inset</p>
+        </section>
+        <section id="anatomiaboxshadow">
+            <article>
+                <h2>Parâmetros e Shorthand</h2>
+                <h3>Deslocamento Horizontal</h3>
+                <p>&nbsp;O primeiro parâmetro que declaramos em uma declaração box-shadow é o <strong>Deslocamento Horizontal</strong> Esse parâmetro nos permite manipular o quão para a direção esquerda orizontal (com valores - negativos) ou para a direção direita horizontal (com valores positivos) a sombra se localizara</p>
+                <h3>Deslocamento Vertical</h3>
+                <p>&nbsp;O segundo parâmetro que declaramos é o <strong>Deslocamento Vertical</strong> Esse parâmetro possui a lógica semelhante a do Deslocamento Horitontal, porém aqui o que muda é a direção; Valores negativos (-) deslocam a sombra para direção "pra cima da vertical" e valores positivos deslocam a sombra pra "baixo da vertical"</p>
+                <h3>Espalhamento</h3>
+                <p>&nbsp;O terceiro parâmetro que declaramos é o <strong>Espalhamento</strong> Esse parâmetro nos permite manipular o quão intenso ou forte será o espalhar das sombras, somente valores positivos podem ser declarados nesse parâmetro porque valores negativos eliminam totalmente o efeito de espalhamento de sombras</p>
+                <h3>Cor</h3>
+                <p>&nbsp;O último valor que declaramos é a tonalidade que a sombra terá</p>
+                <h3>Shorthand</h3>
+                <p>&nbsp;A shorthand para box-shadow segue a ordem <em>Deslocamento Horizontal Deslocamento Vertical Espalhamento Cor</em></p>
+                <aside>
+                    <p>Artigo escrito por Shander Marcelo</p>
+                </aside>
+            </article>
+            <article>
+                <h2>Box Shadow Outset e Inset</h2>
+                <p>&nbsp;Além da box-sahdow padrão nós podemos desenvolver mais dois tipos de box-shadow a <strong>Outset (Para fora do elemento)</strong> e a <strong>Inset (Para dentro do Elemento)</strong></p>
+                <p>Vamos falar sobre o tipo Outset primeiro, ouset se caracteriza por ser uma box shadow que fica para fora do elemento e os parâmetros de uma box shadow outset são os seguintes</p>
+                <h3>Deslocamento Outset de x e y</h3>
+                <p>&nbsp;Esses parâmetros atuam em conjunto sendo x(para direções a horizontal da sombra) sendo valores negativos referentes a parte esquerda da direção horizontal e valores positivos referentes a parte direita da horizontal e y(para direções a vertical da sombra) sendo valores negativos "para cima da vertical" e valores negativos "para baixo da vertical"</p>
+                <h3>Blur ou Desfoque</h3>
+                <p>&nbsp;Este é o terceiro parâmetro das box-shadows(tanto outset ou inset) e ele semelhante ao espahlamento permite que nós configuremos o quão forte o efeito de desfoque da sombra sera. somente valores positivos podem ser declarados (de 0px para não ter efeito de desfoque até 20px, que é o valor maximo e também o limite que o desfoque vai)</p>
+                <h3>Visualização</h3>
+                <p>&nbsp;O último parâmetro das box shadows(outset/inset) esse parâmetro simplemente nos permite configurar o quão grande(ou visivel) a sombra será para o cliente(usuário) também com valores limitamos com 0px sendo o valor que não altera o tamanho da sombra e vai até 20px que é o valor maximo que da o efeito maximo para o tamanho da sombra</p>
+                <h2>Inset</h2>
+                <p>&nbsp;Box shadow tipo Inset além de dar o efeito de sombra para dentro do elemento só possui uma única diferença entre ela e uma box shadow ouset veja as imagens</p>
+                <img src="img/ex-box-shadow_outset.jpg" alt="Exemplo visual de como é a estrutura de uma box shadow outset usando um editor de box-shadow" width="525" height="265" loading="eager">
+                <p>acima temos uma imgagem de como uma box shadow ouset é composta, comparea com a imagem abaixo e note a única diferença</p>
+                <img src="img/ex-box-shadow_inset.jpg" alt="Exemplo visual de como é a estrutura de uma box shadow inset usando um editor de box-shadow" width="524" height="267" loading="eager">
+                <p>acima temos uma imagem de como uma box shadow inset é composta, note que além de "inset" ser declarado afrente de todos os outros parâmetros o resto de sua composição é igual a de uma box shadow outset, o que muda de uma para a outra é o efeito e o "inset" esta afrente no caso de uma box shadow inset</p>
+                <h4>Maçete para sombras</h4>
+                <p>&nbsp;Outra coisa importante de se entender sombre sombras é que através da rgbalpha nós podemos deixar a sombra mais fraca sem alterar sua tonalidade <em><strong>TODA SOMBRA DEVE SER PRETA E TODA SOMBRA PODE E DEVE TER SUA TONALIDADE MANIPULADA ATRAVÉS DA rgba</strong></em></p>
+                <img src="img/ex-black_shadow_rgba.jpg" alt="Exemplo de como se faz a manipulação de transparencia da cor preta para gerar o rgba" width="351" height="273" loading="eager">
+                <p>Observe a imagem acima, note que a paleta de transparencia possui seu marcador da meta, isso é a uma manipulação de transparencia da cor preta, não altera sua tonalidade <mark>SOMENTE ALTERAR A TRANSPARENCIA, ASSIM GERANDO O rgba</mark> isso é o que vai deixar a sua sombra mais leve</p>
+                <aside>
+                    <p>Artigo Escrito por Shander Marcelo</p>
+                </aside>
+            </article>
+            <section>
+                <article>
+                    <h2>Bordas Decoradas</h2>
+                    <p>&nbsp;As bordas dos elementos também podem ser manipuladas, sua forma, sua tonalidade, sua decoração enfim podemos alterar a borda para a forma que quisermos agora vamos a isso</p>
+                    <h3>Border Radius</h3>
+                    <p>&nbsp;A border radius é a manipulação dos cantos de borda de um elemento, as pontinhas, os estilos alteram as propriedades do <em>canto esquerdo superior (top left radius)</em> do <em> canto direito superior (top right radius)</em> do <em>canto esquerdo inferiror (bottom left radius)</em> e do <em>canto direito inferior (bottom right radius)</em> os valores declarados podem ser em formato de pixel ou porcentagem e assim como os estilos anteriores existem shorthands que nos ajudam a simplificar o desenvolvimento <strong><em><mark>MAS AS SHORTHANDS DE BORDER RADIUS POSSUEM UMA ESTRUTURA DE APLICAÇÃO DIFERENTE DAS DOS ESTILOS ANTERIORES</mark></em></strong> veja os exemplos</p>
+                    <img src="img/ex_common-border-radius.jpg" alt="Exemplo de como é a declaração do estilo border radius" width="628" height="153" loading="eager">
+                    <p>&nbsp;A imagem acima demonstra como é a estrutura de uma declaração do estilo border radius, <strong>agora foque na parte dos estilos onde se encontram as declarações de border radius</strong><em>e note que, como dito anteriormente as declarações de direção não fazem o movimento circular que vimos nas declarações de padding, border, outline e margin. <mark>em border radius declaramos CANTO ESQUERDO SUPERIOR(TOP LEFT RADIUS) CANTO DIREITO SUPERIOR(TOP RIGHT RADIUS) CANTRO DIREITO INFERIOR(BOTTOM RIGHT RADIUS) CANTO ESQUERDO INFERIOR(BOTTOM LEFT RADIUS)</mark></em> essa é a ordem de declaração que fazemos quando estilizamos os cantos de borda de um elemento. Agora vamos ver um exemplo de como isso ficaria simplificado em uma shorthand</p>
+                    <img src="img/ex_shorthanded-border-radius.jpg" alt="Exemplo de como é a declaração simplificada do estilo border radius, este contem os mesmos valores do border radius anterior" width="620" height="182" loading="eager">
+                    <p>&nbsp;Olhe a imagem acima focando na declaração que seque ao lado do estilo border radius que tem a decoração azul, veja e ateste que os valores declarados são os mesmos do exemplo anterior, a diferença aqui é que a declaração foi simplificada, e devido a ordem de declaração da shorthand você sempre deve declarar os valores dos cantos superiores primeiro (canto esquerdo e canto direito) e quando for declarar os valores dos cantos inferirores começe pelo canto inferior direito primeiro (como se passasse do canto superior direito para o canto inferior direito) Agora vamos ao último exemplo que é referente a quando nós temos pares de valores iguais e queremos simplificar a declaração dos mesmos</p>
+                    <img src="img/ex_matching-values-border-radius.jpg" alt="Exemplo de como é uma declaração de border radius que tenham pares de valores iguais" width="617" height="175" loading="eager">
+                    <p>&nbsp;A imagem acima demonstra duas coisas, a primeira é como que se declara pares de valores iguais <strong><em>e a outra é que esses pares ou par devem estar localizados em "Analogamente" um ao outro</em></strong> lembra das paletas de cores e do metodo de seleção Analógo? então para pares de border radius essa situação se aplica, você só vai declarar um par de valores na sua shorthand border radius se a localização desses pares for oposta, ou seja se o valor do estilo top left radius for igual a declaração do bottom right radius (note que visualmente ambos estaram opostos um ao outro, um no canto superior esquerdo e o outro no canto inferior direito) então você só declara o valor uma única vez, e o mesmo aconteçe para o canto superior direito e o canto inferior esquerdo</p>
+                    <aside>lembresse que estilo border radius só aceita valores positivos(os negativos anulam o efeito e que quanto maior for o valor maior sera o efeito. pode até fazer uma bolinha)</aside>
+                </article>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Shander Marcelo</p>
+    </footer>
+    <div id="commonrad"></div>
+    <div id="shortrad"></div>
+    <div id="matchrad"></div>
+</body>
+</html>

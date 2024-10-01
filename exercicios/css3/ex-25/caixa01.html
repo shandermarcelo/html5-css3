@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Praticando Caixas</title>
+    <style>
+        h1 {
+            background-color: cyan;
+
+            padding: 10px;
+
+            border: 5px solid darkblue;
+
+            margin: 20px;
+        }
+
+        p {
+            text-indent: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Caixa Box-Level</h1>
+    <p>Conteúdos de parágrafos também são exemplos de box-level. <a href="">links são exemplos de caixas inline-level</a>. Teste e veja como funcionam</p>
+    <h2>Endendimentos</h2>
+    <p>É possivel fazer testes usando <strong>Dev Tools</strong> dos Navegadores para conseguir um resultado satisfatorio podendo visualizar as estilizações desenvolvidas</p>
+    <p><strong><em>Ao utilizar Dev Tools saiba que toda stylesheet que tiver "user agent stylesheet" ou "folha de estilos de agente de usuário" quer dizer que são as configurações do NAVEGADOR</em></strong></p>
+    <h2>Conteudo e Box Size</h2>
+    <p>Primeiramente todo conteudo desenvolvido fica dentro dessa caixa, e a primeira parte que notamos é a area onde o conteudo se encontra, no caso de caixas que possuem o <strong>display block essa area onde o conteudo fica se expande até o maximo da resolução de tela do dispositivo do usuário, mesmo que o conteudo em si não ocupe toda essa expensão, ela é demarcada por padrão devido a natureza do display block</strong> <em>essa caracteristica não se aplica para elementos que possuem o display inline, aqui a area do conteudo será diacordo com o tamanho do mesmo</em>.</p>
+    <p>Outra caracteristica são as medidas dessa area de conteudo <strong>width representa a medida de largura. height representa a medida de altura</strong> <mark>é a essas duas medidas damos o nome de box-size</mark> lembre que o tamanho da caixa não inclui medidas de padding,border,outline e margin. <strong>não inclui nenhuma outra medida além das de box-size</strong></p>
+    <h3>padding</h3>
+    <p>Estilizações de padding devem ser feitas da seguinte forma</p>
+    <ol>
+        <li>padding-top</li>
+        <li>padding-right</li>
+        <li>padding-bottom</li>
+        <li>padding-left</li>
+    </ol>
+    <p>Sempre deve fazer esse movimento circular, da direita para a esquerda. Agora falando sobre padding estas são medidas que tem como função gerar um preenchimento interno, isso fara com que o conteudo seja movido para dentro da caixa, se afastando das suas bordas (caso elas sejam aplicadas) As medidas foram declaradas acima mas sabia que você pode desenvolver padding para partes especificas, caso queira</p>
+    <h3>border</h3>
+    <p>Essa é a medida que desenvolvemos depois da padding, border tem a função de gerar bordas para a caixa, os estilos básicos de border são os seguintes</p>
+    <pre>
+        <code>
+            border-width: 10px;
+            border-style: solid;
+            border-color: black
+        </code>
+    </pre>
+    <p>Como você vê toda borda deve ter uma <strong>espessura, no caso width. Toda border deve ter uma forma, no caso style. E toda borda deve ter uma cor para essa forma, no caso black</strong> saiba que existe muitos tipos de estilos para bordas e o acima é só um exemplo</p>
+    <h3>outline</h3>
+    <p>Pouco utilizado outline é um traço que separa a borda da margin, com o calculo de sua espessura fazendo parte da margem estabelecida, veja um exemplo de estilos outline e note como essas medidas são identicas as de uma borda, Isso quer dizer que a área onde o outline sera exibido e se desenvolvera é dentro da área da margin</p>
+    <pre>
+        <code>
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: red;
+        </code>
+    </pre>
+    <h3>margin</h3>
+    <p>Margin é muito importante porque é através dela que podemos gerar espaço entre uma caixa e outra. assim como padding as medidas de margin são desenvolvidas de top,right,bottom,left. <mark>e é possivel centralizar caixas usando o estilo margin: auto; E da mesma forma que desenvolvesse padding, se desenvolve margin veja abaixo</mark></p>
+    <pre>
+        <code>
+            margin-top: 8px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            margin_left: 8px;
+        </code>
+    </pre>
+    <h2>shorthands</h2>
+    <p>Como se sabe shorthands servem como uma forma de economizar linhas de código e agora vamos aprender alguns shorthands que podemos usar para estilos de elementos para nossa box model</p>
+    <h3>Dica para calculo de elementos de caixa</h3>
+    <p>para calcular o tamanho total de um elemento em caixa some as medidas do conteudo + medidas de preenchimento interno + medidas de borda + medidas de margin (não se inclue as medidas de outline, que é o contorno porque, como dito este estilo faz parte da)</p>
+    <dl>
+        <dt>Shorthand para Border</dt>
+        <dd>border: border-width border-style border-color</dd>
+
+        <dt>Shorthand para Padding</dt>
+        <dd>padding: padding-top padding-right padding-bottom padding-left</dd>
+
+        <dt>Shorthand para Outline</dt>
+        <dd>outline: outline-width outline-style outline-color</dd>
+        
+        <dt>Shorthand para Margin</dt>
+        <dd>margin: margin-top margin-right margin-bottom margin-left</dd>
+    </dl>
+    <h3>Simplificando o Simplificado</h3>
+    <p>É possivel deixar até mesmo as declarações das shorthands box model mais simples, para isso aconteçer 1 condição deve ser atendida, e ela aconteçe quando os 4 valores (top right bottom left) formam 2 pares diferentes, isso quer dizer que se os valores top e bottom forem iguais, e os valores right left forem iguais mas entre os pares esses valores se diferem, então se pode declarar apenas esses valores 2 vezes. veja o exemplo</p>
+    <pre>
+        <code>
+            padding: 10px 15px;
+
+            margin: 20px 30px;
+        </code>
+    </pre>
+    <p><strong>Lembresse que essa simplificação não pode ser aplicada para shorthands de border e outline, isso porque os estilos dessas declarações não são direcionaveis, como são os estilos de padding e margin</strong> portanto essa declaração acima pode ser entendida como (padding top=10px right=15px bottom=10px left=15px  margin top=20px right=30px bottom=20px left=30px)</p>
+    <h3>Valor único</h3>
+    <p>Também é possivel declarar um valor único para estilos de padding e margin, a declaração fica asism</p>
+    <pre>
+        <code>
+            padding: 10px;
+
+            margin: 20px; 
+        </code>
+    </pre>
+    <p>Acima está exemplos de como o valor único funciona. quando todos os estilos direcionais possuem o mesmo valor então se declara este apenas uma vez, assim o valor declarado vai se aplicar a todos os estilos seguintes</p>
+    <h2>Margin e Centralização</h2>
+    <p>Para centralizar uma box model se declara "auto" como valor mas quando se deseja centralizar as laterais então de repete essa declaração veja exemplos</p>
+    <pre>
+        <code>
+            margin: auto;
+        </code>
+    </pre>
+    <h3>Cnetralizando em Descrepancia</h3>
+    <p>Usar um valor único para a shorthand margin pode não ser muito prático porque na maioria das vezes as propriedas top e bottom podem possuir valores diferentes e nesse caso a declaração completa deve ser feita veja</p>
+    <pre>
+        <code>
+            margin: 30px auto 25px auto;
+        </code>
+    </pre>
+    <p>O exemplo acima demonstra o que fazemos em situações assim, mesmo uma shorthand sendo um elemento de multiplas propriedades se houver discrepancias declarações escpecificas para cada propriedade devem ser feitas</p>
+    <a href="/html5-css3/navegador/index.html" hreflang="pt-br" rel="prev" target="_self">NAVEGADOR</a>
+</body>
+</html>

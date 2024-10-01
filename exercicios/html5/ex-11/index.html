@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>&nbsp;Tente abrir esse site em vários dispotivios diferentes ou simplesmente diminua o tamanho do seu navegador</p>
+    <picture>
+        <source media="(max-width:750px )" srcset="img/foto-p.png" type="image/png">
+        <source media="(max-width:1050px )" srcset="img/foto-m.png" type="image/png">
+        <img src="img/foto-g.png" alt="Imagem Flexível" width="" height="" loading="eager">
+    </picture>
+    <br>
+    <a href="../../../entendimentos/ex-11_explçicação.html">entendimento</a>
+    <hr>
+    <h1>Áudios</h1>
+    <p>&nbsp;áudio é uma parte das coisas que componhem a <strong>multimídia</strong> que a <abbr title="Hypertext Markeup Language 5">HTML 5</abbr> suporta e ao desenvolvimento de áudios é feito atraves do elemento <code>&lt;auido&gt;</code> veja um exemplo de uma dos jeitos que áudios podem ser desenvolvidos abaixo:</p>
+    <h2>Áudio simples</h2>
+    <audio src="midia/cosmic_nightmares-jimena_contreas.mp3" controls></audio>
+    <br>
+    <code>&lt;audio src="" controls&gt;&lt;/audio&gt;</code>
+    <p>&nbsp;Acima você viu o que eu chamo de "Áudio simples" isso uma forma bem báscia de se desnevolver áudios, com a estrutura sendo composta pelo elemento de áudio que serve como container para os parametros, que é de onde os componentes visuais de interface são desenvolvidos sendo estes <em>src=""</em> que é o parametro onde nós declaramos a URL do arquivo de audio como valor afinal nós vamos reproduzir áudio; <em>controls</em> é o nosso proximo parametro, este tem a funçlão de gerar a interface do nosso elemento de áudio para que o cliente possa utilizar; <strong><mark>Essa Interface é composta por BOTÃO INTERATIVO DE PLAY, este é o que o usuario precionaria para dar inicio a reprodução do áudio, também pode interromper a reprodução caso o usuario precione o botão novamente. MARCAÇÃO DE TEMPO que exibe a quantidade de tempo que o áudio possui e vai conometrando a reprodução do mesmo. BOTÃO QUE CONTROLA O VOLUME aqui o usuario tera a opção de manipular o volume do áudio. MENU DE OPÇÕES aqui o usuario tera disponivel duas configurações adicionais uma que o permitira baixar o arquivo do áudio que esta no elemento <code>&lt;audio&gt;</code> e outra de VELOCIDADE DE REPRODUÇÃO aqui o usuario tera a opção de manipular a velocidade na qual o áudio sera reprodusido</mark></strong></p>
+    <h2>Áudio de fundo</h2>
+    <audio src="midia/cosmic_nightmares-jimena_contreas.mp3" autoplay loop></audio>
+    <br>
+    <code>&lt;audio src="" autoplay loop&gt;&lt;/audio&gt;</code>
+    <p>&nbsp;Esse é o que eu chamdo de "audio de fundo" que é um áudio que <strong><em>NÃO POSSUI INTERFACE PORQUE O PARAMETRO CONTROLS NÃO É UTILIZADO</em></strong> e o proposito desse tipo de áudio é de quando você queria que a página possua uma música de toque no fundo automaticamente. <strong><em>SAIBA QUE COMO NÃO HÁ CONTROLE DE VOLUME A MUSICA SERA TOCADA EM SEU VOLUME MÁXIMO E O USUARIO SÓ TERA A OPÇÃO DE INTERROMPER CASO SEU NAVEGADOR DISPONIBILIZE</em></strong>inclusive agora é uma boa hora para falarmos sobre as extenções de arquivos de áudio e seus usuos. Primeiro vamos falar da extensão <strong>.mp3</strong>também conhecido como mpeg Essa é a exntensão mais usada para áudios, popular, simples e muito usada.</p>
+    <p>&nbsp;A segunda extensão é a <strong>.ogg</strong> e resumidamente essa é uma extensão para arquivos de áudio open source. <br> A terceira exentsão é a <strong>.wav</strong> essa é uma extensão para grande arquvio de áudio e como arquivos pesados atrapalham <em>TENTE EVITAR USAR ESSE TIPO DE EXTENSÃO PARA FINS QUE NÃO SEJAM DE BAIXAR O ARQUIVO DIRETAMENTE</em></p>
+    <br>
+    <p>&nbsp;<strong>Parametros</strong> Eu quase que me esqueço dos parametros. autoplay é o parametro que você usando quando deseja que um áudio seja reproduzido automaticamente. <br> loop é o parametro que você usa quando deseja que um áduio seja reproduzido novamente sempre que a sua reprodução atual terminar. Agora vamos a um exemplo do que eu chamdo de "áudio completo"</p>
+    <audio preload="" controls controlsList="nodownload" loop>
+        <source src="midia/cosmic_nightmares-jimena_contreas.mp3" type="audio/mpeg">
+        <source src="midia/cosmic_nightmares-jimena_contreas.ogg" type="audio/ogg">
+        <source src="midia/cosmic_nightmares-jimena_contreas.wav" type="audio/wav">
+        <p>Seu navegador não possui suporte para repdrodução de áudios.</p>
+    </audio>
+    <p>&nbsp;Acima nós temos o que eu chamo de áudio completo, note que a estrutura é bem semelhante a de uma imagem dinâmica com o elemento <code>&lt;audio&gt; contendo os parametros de interface do áudio. <em><strong>Nesse caso eu coloquei uma enfase no parametro controlsList="" que é um parametro que retira a opção de download do áudio da interface. Isso pode ser necessário caso não seja desejado que o usuario baixe o áudio. Temos o parametro preload="" também, este é o parametro que usamos para determinarmos como sera o comportamento do elemento durante o carregamento da página onde ele se encontra. "auto" é o valor que declara que o arquivo de áudio sera carregado junto da página inteiramente. ISSO PODE ATRAPALHAR EM CASO DE ARQUIVOS GRANDES "metadata" é o valor que determina que apenas alguns elementos do elemento seram carregados e "none" é o valor que declara que somente apos a interação do cliente que o elemento sera carregado</strong></em>A gora sobre os elementos aninhados estes são <code>&lt;source&gt;</code> e eles atuam como as possiveis extenções de áudio que um navegador pode ter suporte, nem todos os navegadores suportam arquivos .mp3, nem todos os navegadores suportam extenbções .ogg enfim os elementos source estão ai para que o navegador do usuario possua opções de reproduzir o áudio, se a primeira opção não for viavel ele vai para a proxima e se nenhuma das opções forem viaveis o elemento <code>&lt;p&gt;</code> com seu conteudo sera exibido mas ai é possivel você disponibilizar um link de download <strong>CASO QUEIRA</strong> junto da mensagem para que o cliente possa interagir com o áudio enfim esse é o elemento de áudio completo</p>
+    <p><ins>Estrutura <pre>
+        <code>
+            &lt;audio preload="" controls controlsList="nodownload" loop&gt;
+                &lt;source src="midia/cosmic_nightmares-jimena_contreas.mp3" type="audio/mpeg"&gt;
+                &lt;source src="midia/cosmic_nightmares-jimena_contreas.ogg" type="audio/ogg"&gt;
+                &lt;source src="midia/cosmic_nightmares-jimena_contreas.wav" type="audio/wav"&gt;
+                &lt;p&gt;Seu navegador não possui suporte para repdrodução de áudios.&lt;/p&gt;
+            &lt;/audio&gt;
+        </code>
+    </pre></ins></p>
+    <a href="../../../navegador/index.html" hreflang="pt-br" rel="prev" target="_self">Navegador</a>
+</body>
+</html>

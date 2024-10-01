@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <title>HTML5 Listas</title>
+    </head>
+    <body>
+        <h1>Trabalhando com Listas</h1>
+        <h2>Listas Ordenadas</h2>
+        <ol type="" start=""><!--<ol> são elementos que indicam que a ordem de cada elemento <li> possui importancia-->
+            <li>Primeiro Item</li><!--</li> é opicional a partir do HTML5-->
+            <li>Segundo Item
+            <li>Terceiro Item</li>
+            <li>Quarto Item</li>
+            <li>Quinto Item
+            <li>Sexto Item</li>
+            <li>Sétimo Item
+            <li>Oitavo Item</li>
+            <li>Nono Item</li>
+            <li>Décimo Item
+        </ol>
+        <p>&nbsp;Acima temos um elemento <code>&lt;ol&gt;</code>, sigla para <strong>ordered list</strong>. <mark>Esse tipo de lista indica que a ordem do seu conteudo possui importância, isso é representado através dos <strong>marcadores, que no caso são os números a frente do conteudo do elemento</strong></mark> falando sobre o conteudo que <code>&lt;ol&gt;</code> contêm esses são adicionados através do elemento <code>&lt;li&gt;</code> ai você já tem uma ideia geral que como é a estrutura de uma lista, um elemento contem toda a estrutura e elementos de conteudo componhem essa estrutura. <br> &nbsp;Agora vamos falar sobre alguns parametros que uma lista pode possuir. Como acima nós temos uma lista ordenada vamos falar sobre o paramtro <strong>type=""</strong> <mark>esse parametro é onde se define qual sera o tipo do marcador que a lista vai utilizar e existem 5 valores declaraveis</mark> veja um exemplo abaixo:</p>
+        <ol>
+            <li><p>"1" é o valor padrão. Marcador numérico</p></li>
+            <li><p>"A" é o marcador de letras alfabéticas maiusculas</p>
+            <li><p>"a" é o marcador de letras alfabéticas minusculas</p></li>
+            <li>"I" é o marcador de numeros romanos maiusculos
+            <li>"i" é o marcador de numeros romanos minusculos</li>
+        </ol>
+        <p>&nbsp;Agora vamos falar sobre o parametro <strong>start=""</strong> esse é um parametro númerico que podemos usar para demarcar apartir de qual marcador uma lista deve começar. esse valor deve ser compativel com o valor declarado no parametro <strong>type=""</strong> e deve sempre ser númerico mesmo que o marcador utilizado seja alfanumerico</p>
+        <br>
+        <h2>Listas Desordenadas</h2>
+        <p>&nbsp;Também é possivel desenvolver listas onde a ordem de seu conteudo <mark>não seja importante</mark> <code>&lt;ul&gt;</code> é o elemento que usamos para desenvolver uma <em>unordered list</em>. A funcionalidade da estrutura desse elemento é identica a de um elemento <code>&lt;ol&gt;</code> com <code>&lt;ul&gt;</code> contendo todo o conteudo, que é composto por elementos <code>&lt;li&gt;</code> porém, assim como o proposito desse tipo de lista difere de uma oredered list os parametros dela também são diferentes. primeiro vamos falar do <strong>type=""</strong> que assim como em uma oredered list, é onde se define qual sera o tipo do marcador do conteudo da lista. e nós temos três opções como valores possiveis.<mark><em>SABIA QUE O PARAMETRO start="" NÃO TEM UTILIDADE NESSE TIPO DE LISTA PORQUE O PROPOSITO DELA É A FALTA DE ORDENAMENTO E COMO OS MARCADORES SÃO SIMBOLOS IGUAIS NÃO É POSSIVEL DEMARCAR DE ONDE ALGO COMEÇA OU TERMINA. UMA SOLUÇÃO PARA ISSO É INTRODUZIR O CONTEUDO QUE SE DESEJA COMO PRIMEIRO EM PRIMERIO</em></mark></p>
+        <ul type="disc square circle">
+            <li><p><strong>"disc" é o valor para o marcador padrão. um circulo escuro</strong></p></li>
+            <li><p><strong>"square" é o valor para o marcador quadrado escuro</strong></p></li>
+            <li><p><strong>"circle" é o valor para o marcador cirular sem preenchimento</strong></p></li>
+        </ul>
+        <h3>Listas Mistas</h3>
+        <p>&nbsp;É possivel aninhar um elemento de lista em outro veja exemplos abaixo</p>
+        <ol>
+            <li>Atividades do passado</li>
+            <ol type="i">
+                <li>Destruir Brinquedos com meu Dinossauro</li>
+                <li>Falsa Papagaio</li>
+                <li>Papagaio</li>
+                <li>Atividades de Rua</li>
+            </ol>
+            <li>Atividades do Presente</li>
+            <ol type="I" start="5"><!--O PARAMETRO start="" NÃO DEVE SER UTILIZADO EM LISTAS MISTAS ELE SÓ FOI UTILIZADO AQUI PARA DEMONSTRAR QUE AMBAS AS LINHAS ESTÃO ANINHADAS EM UM ELEMENTO <ol> "Raiz"-->
+                <li>Jogos Online</li>
+                <li>Jogos Offline</li>
+                <li>Pirataria</li>
+                <li>Estuto Autodidata</li>
+                <li>Exercício</li>
+                <li>Passeios</li>
+                <li>Vício</li>
+            </ol>
+        </ol>
+        <h4>Misturando Elementos</h4>
+        <p>&nbsp;Agora veja um exemplo de lista mista que possui tanto elemento <code>&lt;ol&gt;</code> quanto elemento <code>&lt;ul&gt;</code></p>
+        <ul>
+            <li>Gostos</li>
+            <ol type="A">
+                <li>Mim mesmo</li>
+                <ol type="A">
+                    <li><p>Gosto de mim mesmo mais do que qualquer coisa e mesmo não gostando muito de mim</p></li>
+                </ol>
+                <li>Alter Ego</li>
+                <ul type="square">
+                    <li>Gosto bastante do possivel eu. mesmo ele sendo alterado</li>
+                </ul>
+                <li>O que disperta atração</li>
+                <ul type="circle">
+                    <li>basicamente qualquer coisa que me atraia</li>
+                </ul>
+
+            </ol>
+            <li>Desgostos</li>
+            <ol type="a">
+                <li>Idiota</li>
+                <ul type="disc">
+                    <li>Idiotas me irritão profundamente</li>
+                </ul>
+                <li>Fanfarrão</li>
+                <ol type="1">
+                    <li>Os palhaços também me irrtam</li>
+                </ol>
+                <li>Folgado</li>
+                <ul>
+                    <li>Idiotas que se acham também irritão</li>
+                </ul>
+                <li>A maioria das coisas</li>
+                <ol type="I">
+                    <li>Falsos,Insistentes etc</li>
+                </ol>
+            </ol>
+        </ul>
+        <h2>Lista de Definição</h2>
+        <dl>
+            <dt>HTML</dt>
+            <dd>linguagém de Marcação de Hipertexto usada para desenvolver websites</dd>
+            <dt>CSS</dt>
+            <dd>Linguagem de Marcação usada para estilizar a parte Visual de um website desde HTML5</dd>
+            <dt>Javascript</dt>
+            <dd>Linguágem de programação usada para tornar websites Interativos</dd>
+        </dl>
+        <p>&nbsp;Acima nós temos uma <code>&lt;dl&gt;</code>, que é uma <strong>descriptive list</strong> isso que dizer que esse tipo de lista possui um funcionamento diferente das <code>&lt;ol&gt;</code> e das <code>&lt;ul&gt;</code>, Aqui cada item sera composto por dois elementos <code>&lt;dt&gt;</code> que é <strong>Descritive term</strong> é onde se vai colocar o <em>termo do item que vai pretencer a esse tipo de lista</em> e <code>&lt;dd&gt;</code> que é <strong>descriptive details</strong>, aqui é onde uma descrição sobre o conteudo que esta no elemeento descritive term será feita. portanto <mark><em>CADA ITEM QUE PERTECER A UMA DESCRIPTIVE SERA SERA COMPOSTO POR ESSES DOIS ELEMENTOS, UM CONTENDO O TERMO DO ITEM E O OUTRO CONTENDO A DESCRIÇÃO DO MESMO</em></mark></p>
+        <a href="../../../navegador/index.html" hreflang="pt-br" rel="prev" target="_self">Navegador</a>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>CSS3 Exercício 14</title>
+</head>
+<body>
+    <h1>Uso das Cores</h1>
+    <h2 style="background-color: blue; color: white;">Exemplo do uso de Cores utilizando CSS Inline Representação Nomenal</h2>
+    <p>&nbsp;Essa é a forma mais básica de representar Cores usando a <abbr title="Cascading Style Sheet">CSS</abbr> você simplesmente seleciona qual cor quer utilizar através do seu nome "blue" para azul "yellow" para amarelo "green" para verde "red para vermelho "white" para branco "black" para preto etc</p>
+    <h2 style="background-color: #0000ff; color: #ffffff;">Exemplo do uso de Cores utilizando CSS Inline Representação Hexadecimal</h2>
+    <p>&nbsp;Essa é outra forma de representar cores, aqui você seleciona a cor através do simbolo de jogo da velha, que vai indicar que o metodo de seleção sera uma combinação em numeros <strong>Hexadecimais</strong> ou seja você vai declarar qual é o conjunto de numeros entre 0, 1, 2, 3, 4, 5, 6, 7, 8 e 9, a, b, c, d, e, f que representa a cor que sera usada</p>
+    <h2 style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);">Exemplo do uso de Cores utilizando CSS Inline Representação rgb</h2>
+    <p>&nbsp;Essa é a forma que usa "Vermelho Verde Azul" aqui você vai utilizar a quantidade de vermelho verde e azul para selecionar a cor que vai ser usada; e como o nome do metodo implica primeiro você declara em valor numerico a quantidade de vermelho que a cor possui, depois a quantidade de verde e por fim a quantidade de azul e essa "combinação" vai selecionar a cor que você quer. No caso de uma cor vermelha forte a combinação (seria 255. 0, 0) viu 255 é o valor maximo que uma cor pode ter então ficou <em>(maximo de Vermelho, nada de Verde, nada de Azul)</em></p>
+    <h2 style="background-color: hsl(240, 100%, 50%); color: hsl(0, 0%, 100%);">Exemplo de uso de Cores utilizando CSS Inline Representação hsl</h2>
+    <p>&nbsp;Esse é o metodo <strong>MATIZ SATURAÇÃO LUMINOSIDADE</strong> tradução do <abbr title="Hue Saturation Lightness">hsl</abbr> basicamente esse método você vai declarar os valores que representam a cor que você quer usar através da Matiz, onde o valor declarado é numerico normal, Saturação, onde o valor declarado é porcentagem, Luminosidade, onde o valor declarado é Porcentagem; O conjunto desses valores declarados selecionara a cor</p>
+    <h1 style="background-color: blue;">MAÇETÃO</h1>
+    <p>&nbsp;<mark>Para que você não precise depender de recursos externos para saber quais são os valores caso queria representar cores usando os métodos <abbr title="red green blue">rgb</abbr> hexadecimais e <abbr title="hue saturation lightness">hsl</abbr> faça uso desse maçetão. Primeiro você declara o nome da cor</mark></p>
+    <img src="img/macetao-cor.png" alt="Imagem de blue, que é um valor declarado do parametro background-color" width="63" height="18" loading="eager">
+    <p>Ai você vai ciclar na caixa que representa a cor e nela você vai se deparar com isso</p>
+    <img src="img/macetao-cor1.png" alt="Imagem do painel de cores com o método rgb" width="343" height="252" loading="eager">
+    <p>Esse é o que eu chamo de <strong>"Painel de Controle de cor"</strong> nele você podera além de manipular qual a tonalidade da cor que você já declarou na parte mais larga, vai pode manipular a ocapidade (transparencia) da cor na parte quadriculada e vai poder manipular a propria cor em si na parte ao canto. <em><mark>e note que acima dessas três partes há um local que esta escrito <abbr title="red green blue">rgb</abbr> que possui os valores da cor que você escolheu já para o método <abbr title="red green blue">rgb</abbr></mark></em> se você não clicar em nada nesse painel tudo permanecera o mesmo mas se você interagir com ele a manipulação que você fizer já vai alterar o metodo do nominal para o <abbr title="red green blue">rgb</abbr> <strong>e se você quiser outro método é só clicar na parte onde esta o <abbr title="red green blue">rgb</abbr> que você tera os metodos <mark>hexadecimal, <abbr title="hue saturation lightness">hsl</abbr> e <abbr title="hue whiteness blackness" style="background-color: hwb(240 0% 0%); color: hwb(0 100% 0%);">hwb</abbr></mark> sendo o último método um padrão <abbr title="Cascading Style Sheet version 4">CSS4</abbr> e ai ao escolher o método que você quer usar é só manipular o que quiser ou sair do painel que o método selecionado vai subistituir o método nominal onde tudo começou.</strong></p>
+    <p>método hexadecimal <img src="img/macetao-cor2.png" alt="Imagem do painel de cores com o método hexadecimal" width="343" height="252" loading="eager"></p>
+    <p>método hue saturation lightness <img src="img/macetao-cor3.png" alt="Imagem do painel de cores com o método hsl" width="344" height="252" loading="eager"></p>
+    <p>método hue whiteness blackness <img src="img/macetao-cor-css4.png" alt="Imagem do painel de cores com o método hwb" width="344" height="254" loading="eager"></p>
+    <h3>Método hwb</h3>
+    <p>&nbsp;Esse é um metodo de desenvolvimento de cor que é um padrão sugerido na <abbr title="Cascading Style Sheet version 4">CSS4</abbr> e sua estrutura é indentica a do método <abbr title="hue stauration lightness">hsl</abbr> nele você declara três valores numericos sendo o primeiro o valor da matiz da cor, numero normal, depois você declara a "branqueza" da cor com um valor em porcentagem e você declara a "negreza" da cor com valor em porcentagem também ai o conjunto desses três valores vai de dar o resultado representando a cor no método Hue Whiteness Blackness. <mark>Esse método ainda não é suportado pela <abbr title="Hypertext Markup Language">HTML</abbr> mas será em breve então é bom saber &#x1F90F;</mark></p>
+    <h2>Transparencias de cores</h2>
+    <p>&nbsp;Lembresse que as manipulações que você fizer na transparencia de uma cor vai mudar o nome dos metodos <abbr title="red green blue">rgb</abbr> para <abbr title="red green blue alpha">rgba</abbr> e <abbr title="hue saturation lightness">hsl</abbr> para <abbr title="hue stauration lightness alpha">hsla</abbr> sendo que alpha(alfa) é o indicador de que a cor possui opacidade(transparencia)</p>
+    <a href="/html5-css3/navegador/index.html" hreflang="pt-br" rel="prev" target="_self">Navegador</a>
+    <a href="/html5-css3/entendimentos/ex-14_entendimentos.html" hreflang="pt-br" rel="next" target="_self" style="font-size: xx-large; color: hsl(60, 100%, 50%); background-color: rgb(128, 0, 128);">ENTENDIMENTO</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../ex-13/img/favicon.ico" type="image/x-icon">
+    <title>Exercício 13c CSS Externo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css"><!--É POSSIVEL VINCULAR MAIS DE UM ARQUIVO .CSS ATRAVÉS DA CRIAÇÃO DE MAIS UM ELEMENTO DE link VINCULATIVO-->
+</head>
+<body>
+    <h1>CSS Externo</h1>
+    <h2>O que é?</h2>
+    <p>&nbsp;Esse tipo de estilização se distingue por ser um recurso externo a HTML, ou seja <strong>CSS Externo é um arquivo independente, sua extensão é .css</strong> e é dentro desse arquivo onde ficaram todas as estilizações feitas e essas estilziações poderam ser vinculadas a arquivos .html através do elemento <em><code>link=""</code></em> este possuira os parametros <em>rel="" href=""</em> rel é como o que é o recurso que esta sendo relacionado ao arquivo, no caso o valor é "stylesheet" porque o recurso é um arquivo de folha de estilo. href você já sabe é onde declaramos a localização do recurso. <strong>um padrão é que se desenvolva um arquivo chamado <mark>style.css</mark> mas você além de poder nomear o que quiser (desde que esteja diacordo com a convenção de nomeatura) também pode vincular quantos arquivos .css quiser, basta desenvolver um elemento link para cada um e ir vinculando aos teus arquivos .html <mark>ASSIM A ESTILIZAÇÃO DO ARQUIVO .CSS SERA TRANSPORTADA PARA TODOS OS ARQUIVOS .HTML é muito mais simples e pratico usar esse metodo de estilização</mark></strong></p>
+    <h2>Falando mais sobre CSS</h2>
+    <p>&nbsp;Sabia que tem como você criar regras para a sua folha de estilo CSS. sim @charset "" é uma regra que só pode ser criada dentro de um arquivo .css e como você deve ter percebido essa é uma regra relacionada a conjunto de caracteres, no caso <strong>ela vai garantir que o seu arquivo .css possua compatibilidade com acentuações. Essa regra não é obrigatoria mas caso você precise resolver problemas com acentuação <em>coloque a regra antes de desenvolver qualquer coisa no arquivo .css</em></strong></p>
+    <a href="../../../navegador/index.html" hreflang="pt-br" rel="prev" target="_self">Navegador</a>
+</body>
+</html><!--CSS Externo é o ultimo na hierarquia de estilização-->

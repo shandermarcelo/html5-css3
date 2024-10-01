@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+    background-color: #89A1B8;
+}
+
+.whatis {
+    color: #177FE1;
+    text-align: center;
+    font: normal 2em 'Times New Roman', Times, serif;
+}
+
+.explained {
+    text-indent: 5px;
+    text-align: justify;
+    color: #3C668E;
+}
+
+#thatis {
+    color: white;
+    text-align: center;
+    font: normal 3em 'Times New Roman', Times, serif;
+}

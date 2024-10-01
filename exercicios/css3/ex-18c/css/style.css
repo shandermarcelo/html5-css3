@@ -1,0 +1,19 @@
+body {
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+strong {
+    color: green;
+}
+
+em {
+    color: red;
+}
+
+mark {
+    background-color: blue;
+}

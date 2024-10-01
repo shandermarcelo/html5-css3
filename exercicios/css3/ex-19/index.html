@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Exercício 19 - Fontes Externas</title>
+</head>
+<body>
+    <h1>Fontes Externas - CSS Interno</h1>
+    <p>&nbsp;Para usar Fontes externas primeiramente você deve têlas, seja baixando em um site que o(s) autores da fonte te dêm uma licença para usa-la, ou a licença é gratuita, engim você tem que ter posse e direito de uso da fonte ai para você implementala você pode ou <em>importa-la</em> <mark>direto do site de onde ela seja</mark>. O importe funciona assim @import é a regra, que precede as declarações de seletores e nela declarare o parametro url, onde esta contido o endereço da fonte</p>
+    <img src="img/import-font.jpeg" alt="Imagem que mostra como uma fonte é importada do seu local de origem a uma aplicação" width="668" height="62" loading="eager">
+    <p>&nbsp;A imagem acima demonstra como a importação é feita, você vai precisar criar uma <strong>Estilização Interna</strong> e ai é só você copiar o código pronto diretamente do site de fontes em questão; Como já se sabe isso é um método que usa URL absoluta e você deve ser siente dos prós e contras disso mas agora vamos ao proximo método de usar fontes externas</p>
+    <h2>Fontes Externas - CSS Externo</h2>
+    <p>&nbsp;Pelo nome desse método você já imagina como ele funciona, vamos usar uma folha de estilo como ambiente para desenvolvermos tudo lá</p>
+    <img src="img/external-font_external_use.jpg" alt="Imagem que mostra como é feito o uso da fonte externa através de folha de estilo" width="458" height="119" loading="eager">
+    <p>&nbsp;A imagem acima possui um <strong><em>font face personalizado</em></strong> isso significa que você tera que criar uma estilização customizada porque o recurso que você vai usar não faz parte dos recursos padrões das <abbr title="Cascading Style Sheet">CSS</abbr>. <br> Note que a declaração <strong>font-family</strong> é onde você declara o nome da fonte, a declaração <strong>src</strong> é onde você declara url da fonte(sua localização). e a proxima declaração é <strong>format</strong>, Essa é uma estilização que é onde você declara qual é o tipo da fonte, como formato dela e existem cinco tipos veja</p>
+    <dl>
+        <dt>opentype</dt>
+        <dd>opentype é um formato muito usado em fontes de extensão .otf</dd>
+        <dt>truetype</dt>
+        <dd>truetype é um formato usado em fontes de extensão .tff (também pode se usado para fontes opentype)</dd>
+        <dt>embedded-opentype</dt>
+        <dd>outro formato que se pode declarar</dd>
+        <dt>truetype-aat</dt>
+        <dd>truetype apple advanced typography</dd>
+        <dt>svg</dt>
+        <dd>sevg para fontes</dd>
+    </dl>
+    <p>&nbsp;E por último se tem as estilizações de font weight e font style, basicamente elas estão presentes porque assim, você indica que a fonte deve ser executada livre de efeitos negrito e italico, deixando a "pura" <em>(outra coisa caso a sua fonte tenha mais de um arquivo você teria de desenvolver outro estilo url e depetir o processo o que muda é a 'virgulaespaço' que vão atuar como separador entre um estilo e outro)</em> e ai para incrementar a fonte basta declarar seu nome no estilo font-family, como eu uso shorthands para isso as declarações estão lá</p>
+    <a href="/html5-css3/navegador/index.html" hreflang="pt-br" rel="prev" target="_self">Navegador</a>
+</body>
+</html>

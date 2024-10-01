@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Entities e Emojis</title>
+</head>
+<body>
+    <h1>HTML Entities</h1>
+    <p>&nbsp;O termo HTML Entities é usado para códigos que são usados para rerpesentar caracteres especiais e simbolos, um bom exemplo do uso disso são os colchetes angulares(simbolo de menor que e maior que)<br> &nbsp;Imagine um  desenvolver que quer representar os simbolos de Colchete Angular visualmente em formatdo textual para os usuarios, ele não poderá fazer isso apenas precionando as teclas que representão esses simbolos no seu teclado, isso porque a linguagem HTML já foi programada para reconhecer essas teclas como as ativadoras dos seus componentes de tags então como o desenvolvedor vai representar esses simbolos visualmente para os usuarios? Ele terá 2 opções, sendo uma delas trabalhosa e a outra simples vamos a primeira: <br> 1ª O desenvolvedor vai criar uma imagem que possua os simbolos dos colchetes angulares e com a imagem pronta ele vai colocala no seu código através do elemento &lt;img&gt; através do parametro <b>src=""</b> declarando a URL da imagem como valor, e ai ele vai fazendo as declarações nos outros parametros desse elemento; Como você imagina a imagem vai ter que ser encaixar no texto, vai ser um trabalhão. Agora vamos para a segunda opção <em>E ESSA É A OPÇÃO CERTA!</em> <br> &nbsp;O Desenvovlerdor vai utilizar <em><b>HTML ENTITIES</b></em> correspondentes a estes simbolos para representalos. O que são HTML ENTITIES? elas são um conjunto de códigos onde cada entity representa um simbolo próprio, veja uma lista com algumas entities:</p>
+    <ul>
+        <li><p>&#38;nbsp&#59; representa um efeito de um espaço em branco, esse espaço é pequeno mas pode ser repetindo muitas vezes.</p></li>
+        <li><p>&#38;lt&#59; representa o simbolo de Menor que, o tal do colchete angular</p></li>
+        <li><p>&#38;gt&#59; representa o simbolo de Maior que, também é um colchete angular</p></li>
+        <li><p>&#38;copy&#59; representa o simbolo de copyright, ou os direitos autorais, o conteudo que for colocado grupado a introdução desse simbolo vai ser considerado as cradenciais do dono da copyright olha o exemplo &copy;Shander Marcelo Note que o nome é sobrenome ficaram com destaque</p></li>
+        <li><p>&#38;trade&#59; representa o simbolo de "autoria de conteudo", que é quando um idvividuo, empresa ou conglomerado possuem um simbolo, design ou expressão que faz com que seu produto ou marca tenham sua fonte ou origem relacionada a tal grupo, o que os distinguiras das demais marcas e produtos. Esse simbolo é usado para produtos os serviços; O que o diferencia do copyright</p></li>
+        <li><p>&#38;reg&#59; representa que o conteudo esta vinculado a uma marca registrada legalmente pelo governo, diferente o simbolo de &trade; que não possui base juridica o simbolo de marca registrada possui e isso é uma das coisas que mais o distingue do nosso &trade; ,isso também implica que o uso desse simbolo <strong><b>MUITO MAIS RESTRITO, o que significa que somente individuos ou empresas que possuem tal registro de marca no governo podem usar, esse registro geralmente dura por uma década e o uso desse simbolo sem o registro pode causa problemas judiciais reais para quem inflingir tal regra</b></strong></p></li>
+    </ul>
+    <h2>Emojis</h2>
+    <p>&nbsp;Como se sabe os <em><b>Emjois</b></em> são muito utilizados atualmente e implementalos é bem simples; <em>Não é todo emoji que vai ter suporte pela HTML mas a maoria dos usados tem veja como implementalos agora</em> <br> Primeiro usasse <em><b>&#x</b></em> isso quer dizer que você vai digitar algo em deximal mas para o uso de emojis essas são as iniciais, entenda isso como as iniciais de uma HTML Entity & junto do conteudo, bem aqui o & esta aconpanhado da hastag e do x; Apos digitar essas três letras <em><b><mark>você vai precisar de saber qual é o ideitificador do emoji que você quer usar, <a href="https://emojipedia.org/" target="_blank">Emojipedia</a> e um site confiavél que possui a maioria se não todos os emojis que são usados pela web, basta você ir lá e buscar pelas INFORAÇÕES TÉCNICAS do emoji que deseja usar e verificar em Codepoints, sempre IGNORANDO OS CARACTERÉS U+, o conteudo do emoji que será entendedido pela HTML está sempre após esses caracteres</mark></b></em></p>
+    <a href="../exercicios/html5/ex-02/index.html">Segundo Exercicío</a>
+</body>
+</html>

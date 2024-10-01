@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../exercicios/html5/ex-11/img/favicon.ico" type="image/x-icon">
+    <title>Exercício 11 Explicação</title>
+</head>
+<body>
+    <h1>Elemento &lt;picture&gt; e seu funcionamento</h1>
+    <p>&nbsp;O elemento <code>&lt;picture&gt;</code> é o que se usa na <abbr title="Hypertext Markup Language 5">HMTL5</abbr> para desenvolver <em><strong>Imagens Responsivas, estas são imagens que se adapitam as resoluções de dispositivos como TV, Smartphone, Tablet etc</strong></em> e vai ser o elemento <code>&lt;picture&gt;</code> quem vai nestar todo o conteudo desenvolvido. Veja um exemplo abaixo</p>
+    <pre>
+        <code>
+            &lt;picture&gt;
+                &lt;source media="(max-width: 750px)" srcset="img/ex-img-small.png" type="image/png"&gt;
+                &lt;source media="(max-width: 1050px)" srcset="img/ex-img-medium.png" type="image/png"&gt;
+                &lt;img src="img/ex-img-big.png" alt="descrição na imagem" width="" height="" loading="eager"&gt;
+            &lt;/picture&gt;
+        </code>
+    </pre>
+    <h2>Entendendo a estrutura</h2>
+    <p>&nbsp;Como você pode ver acima o elemento <code>&lt;picture&gt;</code> <em><strong>Usa um elemento <code>&lt;img&gt;</code> que contem a imagem que sera exibida por padrão, os parametros <em>width="" e height="" <strong>não possuem valores declarados porque isso atrapalha as adaptações da imagem portanto, em casos de adaptação de imagem não desenvolva esses parametros</strong></em> E nas linhas de código acima, possui elementos <code>&lt;source&gt;</code> que são os elementos que nós utilizamos para fazer a adapitação da imagem.</strong></em></p>
+    <p>&nbsp;Note também que <mark>cada elemento <code>&lt;source&gt;</code> possui declarado em seu parametro <em>srcset=""</em> valores que são de imagens "diferentes" da imagem original <strong>isso porque para fazer a adaptação de imagem na <abbr title="Hypertext Markup Language 5">HTML5</abbr> você utiliza replicas de uma mesma imagem para adaptala as resoulções</strong></mark> portanto cada parametro <em>srcset=""</em> possuira declarado como valor uma replica da imagem que se deseja adaptar. <em><strong>A declaração dos valores pode ser feita de duas formas, <mark>caso queira declarar no parametro media="()" min-width: como valor de medida então declare no parametro srcset="" as imagens que possuem maior resolução primeiro e ai vai decresendo diacordo com a quantidade de adapitações que você queria que a sua imagem possua. Caso queria usar o parametro max-width: então faça como está no exemplo acima.</mark> Note também o parametro media="()" que nesse caso sera o parametro onde as demarcações de adapitação seram feitas e como você deve imaginar <mark>estes valores em pixel não foram declarados por aleatoriedade pois cada dispotivio possui uma certa "margem de resolução"</mark> imagens com dimenções 300 pixels por 300 pixels são ideais para smartphone, ja imagens com 700 pixels por 700 pixels são ideais para tablets e assim vai <mark>como há varios dispositivos você deve pesquisar qual é a margem do tipo de dispositivo que você deseja adaptar as replicas da sua imagem</mark> e é exatamente isso que nós declaramos como valor no paramtero srcset="", valor usar o exemplo acima para explicar isso, como as adaptações são basicamente a exibição de replicas da mesma imagem porem estas possuem resoluções diferentes então cada imagem é seu proprio arquivoe como povce pode ser acima <mark>a imagem padrão possui dimenções de 1000pixels e no caso nós queremos que nossa imagem se adapite paras resoluções de smartphones e teblets  e é por isso que o segundo e ultimo elemento <code>&lt;source&gt;</code> possui declarado como valor em seu parametro media="()" "(max-width= 1050px)" e em seu parametro srcset="" "img/ex-img-medium.png" que é a replica de 700pixels por 700pixels porque 1050pixels é o valor maximo que uma resolução deve possuir para que a adaptação da imagem não aconteça, se a resolução por menor do que o valor declarado em um max-width então a adaptação aconteçe.</mark> e a mesma ação ocorre para o primeiro elemento <code>&lt;source&gt;</code>, que possui declarado em seus parametros o valor maximo para que az adaptação não aconteça e o caminho da replica da imagem de 300 pixels por 300pixels. Essa adpação é para resoluções de smartphones.<mark>Note também o parametro type="" nele nós declaramos a extensão da imagem que sera usada na adaptação no caso "image/png"</mark></strong></em></p>
+    <h3>Conclusão</h3>
+    <p>&nbsp;E é isso essa é a finalidade do elemento <code>&lt;picture&gt;</code> e de seus elementos nestados</p>
+    <a href="/html5-css3/exercicios/html5/ex-11/index.html">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Exercicio 18 b</title>
+</head>
+<body>
+    <header>
+        <h1>Tamanho de Fontes</h1>
+    </header>
+    <main>
+        <p>&nbsp;Primeiramente devemos saber que antes de definirmos o tamanho de uma fonte nós devemos saber que as medidas de uma fonte podem ser categorizadas de duas formas, ou a medida é <strong><em>Absoluta</em></strong> ou a medida é <strong><em>Relativa</em></strong> e como você deve imaginar, esses nomes remetem a caracteristicas das <abbr title="Uniform Resource Locators">URLs</abbr> sendo uma <strong><em>medida Absoluta</em></strong> toda forma de se medir que possua como método de calculo valores exatos como (cm)cemtimetros, (px)pixels, (mm)milimetros, (pt)pontos, (in)polegadas, (pc)paiscas enquanto que a <strong><em>medida Relativa</em></strong> é todo método que usa valores relativos a um valor "original" (em)medida relativa, (rem)medida relativa ao root, que é a fonte que esta no elemento body, (ex)medida relativa a altura-x da fonte, (vw)medida relativa porcentagem da largura da viewport, que é resolução do dispositivo que executa, (vh)medida relativa porcentagem da altura da viewport e por porcentagem %. <em>O que é recomendado é usar as medidas (em) ou (px)</em></p>
+        <p>&nbsp;</p>
+        <h2>formas de se medir e estilo font-size</h2>
+        <p>Navegadores não lidam muito bem com estilos font-size que usam medidas absolutas porque devido a resolução de tela entre os dispositivos varias, devido a fabricação e tipo de dispositivo, a representação de uma medida absoluta não sera tão bom quanto se imagina, há dispositivos que não reconheçem as medidas aboslutas e isso os fara adaptar o tamanho de uma fonte diacordo com a sua propria forma de medir algo; E é por isso que a forma <strong>em</strong> é uma das 2 formas recompendadas de se definir font-size, pixels, apesar de ser recomendada também sofre do mesmo problema que as outras formas de medida absolutas e é por isso porque a Medida Relativa (em) seria a melhor, porque essa forma de medir além de usar uma letra maiuscula como referencia de medida (letra M), não calcula com valores absolutos e sim a diferença do <em>valor original de uma fonte, que geralmente é 16pixels (16px)</em> com o valor que se deseja utilizar; Exemplo se 16 pixels é 1em então 2em são 32pixels e assim por diante, (em) calcula multiplicando o valor original pela quantidade de que deseja <mark>é como essa forma de medir resulta em um valor relativo então os dispositivos poderam adaptala melhor do que um valor absoluto, pode ser que não seja uma adaptação perfeita mas sera bem melhor do que uma adaptação de valor absoluto</mark></p>
+    </main>
+    
+</body>
+</html>

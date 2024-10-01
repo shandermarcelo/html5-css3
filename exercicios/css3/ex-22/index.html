@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Pseudo Classe e Afilidaos</title>
+    <style>
+        @charset 'UTF-8';
+
+        p {
+            text-indent: 5px;
+        }
+
+        strong {
+            font-weight: bolder;
+        }
+
+        em {
+            font-weight: lighter;
+        }
+
+        div > p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        div > p:hover {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            font-weight: bolder;
+        }
+
+        div > p:active {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: x-large;
+            font-weight: lighter;
+        }
+
+        #hover:hover {
+            color: yellow;
+        }
+
+        #active:active{
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Pseudo Classes</h1>
+    <p>É considarada uma <strong>Pseudo Classe</strong> toda estilização auxiliar que visa manipular o estado de um elemento. Desenvolvidas através de seletores as Pseudo classes são conteudos que desenvolvemos quando queremos manipular "O que vai acontecer quando o elemento estiver em *** estado" veja alguns exemplos de como as pseudo classes funcionam</p>
+    <div id="hover"><p>Este é o exemplo de pseudo classe que faz uso das estilizações para o estado <strong>hover</strong> este é o estado onde o conteudo possui o cursor sob si e o código de desenvolvimento é o seguinte</p> 
+        <pre>
+            <code>        
+                #hover:hover {
+                    color: yellow;
+                }
+            </code>
+        </pre>
+     <p>Como você pode ver o estilo de pseudo classe é desenvolvido através de um <em>atrelamento</em> ao seletor, que pode ser um ideitificador único ou uma classe ou diretamente no elemento. <em>Pseudo Classes são representadas pelo simbolo de :</em> você declara esse simbolo antes de desenvolver a pseudo classe.</p></div>
+    <div id="active"><p>Aqui é o exemplo de pseudo classe que usa estilos para quando o conteudo esta no estado de ativação, basicamente o que aconteçe quando interajem com o conteudo. a estrutura de desenvolvimento é a mesma do hover, eu fiz esse exemplo para demonstrar que existem muitas pseudo classes. a estrutura é a seguinte</p> 
+        <pre>
+            <code>
+                #active:active{
+                    color: red;
+                }
+            </code>
+        </pre>
+        <p>e ai está a estrutura</p>
+    </div>
+    <h2>Afiliamento</h2>
+    <p>Primeiramente Afiliamento é o nome dado a conteudos que se encontram dentro de outros conteudos. o elemento <code>&lt;html&gt;</code> "afilia" todos os conteudos desenvolvidos para uma aplicação <abbr title="Hypertext Markup Language">HTML</abbr> então você pode dizer que "toda a estrutura HTML é filha do elemento html porque todos os conteudos estão contidos dentro dele" e é justamente isso que é a tal afiliação. E você pode desenvolver estilos diretamente para esses "filhos" veja o exemplo</p>
+    <pre>
+        <code>
+            div > p {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: medium;
+                font-weight: bold;
+            }
+    
+            div > p:hover {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: large;
+                font-weight: bolder;
+            }
+    
+            div > p:active {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: x-large;
+                font-weight: lighter;
+            }
+        </code>
+    </pre>
+    <p>Viu os exemplos acima demonstram como eu estilizei os conteudos textuais dos exemplos de uso de pseudo classe. como o elemento <code>&lt;div&gt;</code> não possui suporte para estilizar conteudo textual eu estilizei eles através da afiliação, desenvolvendo elementos <code>&lt;p&gt;</code> dentro das divs, assim os afiliando a elas e ai eu fui estilizando diacordo com o proposito das pseudo classes que eu desenvolvi para cada div</p>
+    <a href="/html5-css3/navegador/index.html" hreflang="pt-br" rel="prev" target="_self">NAVEGADOR</a>
+</body>
+</html>

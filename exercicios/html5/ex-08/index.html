@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Mais formatações</title>
+</head>
+<body>
+    <h1>Mais Formatações</h1>
+    <p>O comando <code>document.getElementById("teste") é escrito em linguagem Javascript</code></p>
+    <pre>
+        <code>
+            num = int(input('Digite um número'))
+            if num % 2 == 0:
+                print(f'O número {num} é PAR' )
+            else:
+                print(f'O número {num} é IMPAR')
+            print('Fim do Programa')
+        </code>
+    </pre>
+    <p>Acima temos um exemplo de exibição de código, o elemento <code>&lt;code&gt;</code> é utilizando para representar seu conteudo como código em um texto, elementos são representado com o auxilio de duas <strong>HTML Entities</strong> sendo elas <img src="img/lessthen-entity.jpeg" alt="ilustração do comando &lt;, que representa a Html Entity Menor que">a Html Entity que representa o simbolo de Menor que e a <img src="img/greaterthen-entity.jpeg" alt="ilustração do comando &gt; que representa a Html Entity Maior que">a Html Entity que representa o simbolo de Maior que. Estas Entities são uteis por causa dos simbolo que elas representam, estes não são possiveis de exibir em forma de texto porque as teclas deles já são compreendidas como os comandos para marcação. Enfim o que deve ser entendido aqui é que o elemento <code>&lt;pre&gt;</code> deve ser utilizando como container (alguns chamam isso de Elemento Pai) do elemento <code>&lt;code&gt;</code> quando o código a ser exibido por grande devendo ao mono espaçamento que <code>&lt;code&gt;</code> não reconhece mas <code>&lt;pre&gt;</code> tenta reconhecer</p>
+    <h2>Citações Simples</h2>
+    <p>Como diria o Pai dos Burros: O Computador <q>é um burro muito rapido</q>. <br> Note que na frase acima houve o uso das aspas na citação, <em>porem você não coloca as aspas "" assim para citações use o elemento <code>&lt;q&gt;</code> ele é o elemento responsavel por indicar "quotes" que são citações. LEMBRESE HTML5 É SEMANTICA então se é possivel você indicar sentido a algo INDIQUE!</em></p>
+    <h2>Citações Completas</h2>
+    <p>Segundo Fulano, no seu livro Ciclano:Solução Definitiva:</p>
+    <blockquote cite="fulano.html">
+        Compreendemos que Ciclano é um problema portanto a Solução é Fulano, que sou eu
+        Fulano, a solução definitiva para o problema que é Ciclano
+    </blockquote>
+    <p>acima temos um exemplo de citação completa. o elemento <code>&lt;blockquote&gt;</code> é o que você vai usar para declarar citações completas, o parametro <strong>cite=""</strong> atua como um "Link Interno" os usuarios não teram acesso a ele porem <em>os mecanismos de busca/interpretadores vão ter acesso a URL declarada nesse parametro e vão saber que a citação veio de tal URL</em> e note que o conteudo que esse elemento possui é desgrudado do canto da pagina, isso é um efeito desse elemento</p>
+    <h2>Abreviações</h2>
+    <p>a Triade do Desenvolvimento Web é composta por <abbr title="Hypertext Markup Language">HTML</abbr> <abbr title="Cascading Style Sheets">CSS</abbr> e Javascript</p>
+    <h2>Direcionamento de texto</h2>
+    <p>Para manipular a direção de exibição de um texto utilize o elemento <code>&lt;bdo&gt;</code> e em seu parametro <strong>dir=""</strong> declare como valor qual direcionamento o texto tera <strong>"lto"</strong> quer dizer "left to right" e vai manipular a direção do texto da esquerda para a direita <bdo dir="ltr">o conteudo daqui emn diante já esta contido em um elemento <code>&lt;bdo&gt;</code> com o valor declarado em seu parametro dir como <strong>"ltr"</strong> o que não mudou nada. Isso esse é o valor padrão</bdo>. <strong>"rtl"</strong> quer dizer "right to left" e manipula a direção do texto da direita para esquerda <bdo dir="rtl">assim, esse você pode ver de uma olhada</bdo></p>
+    <a href="../../../navegador/index.html" hreflang="pt-br" rel="prev" target="_self">Navegador</a>
+</body>
+</html>
